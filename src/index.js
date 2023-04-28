@@ -28,10 +28,10 @@ const debounceRunSearch = debounce(runSearch, DEBOUNCE_DELAY);
 formInputCountry.addEventListener('input', debounceRunSearch);
 
 function verificationCountry(countries) {
-    if (countries.length >= 10) {
+    if (countries.length >= 9) {
         Notify.info("Too many matches found. Please enter a more specific name.");
          console.log(countries);
-    } else if (countries.length > 2 && countries.length < 10) {
+    } else if (countries.length > 2 && countries.length < 9) {
         countryOutputShort(countries);
          console.log(countries);
     } else  {
